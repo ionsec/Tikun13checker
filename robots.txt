@@ -1,0 +1,106 @@
+# Robots.txt - בודק תיקון 13
+# כלי חינוכי לבדיקת התאמה לחוק הגנת הפרטיות הישראלי
+# Privacy Assessment Tool for Israeli Amendment 13
+# עדכון אחרון: דצמבר 2024
+
+# התרה לכל מנועי החיפוש הלגיטימיים
+# Allow all legitimate search engines
+User-agent: *
+Allow: /
+Crawl-delay: 1
+
+# נתיבים מותרים במפורש
+# Explicitly allowed paths
+Allow: /index.html
+Allow: /assets/
+Allow: /assessment/
+Allow: /PRIVACY.md
+Allow: /COOKIE_POLICY.md
+Allow: /README.md
+Allow: /LICENSE
+
+# מיקום מפת האתר
+# Sitemap location
+Sitemap: https://ionsec.github.io/Tikun13checker/sitemap.xml
+
+# הוראות למנועי חיפוש ספציפיים
+# Specific search engine instructions
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Googlebot-Image
+Allow: /assets/images/
+Allow: /favicon.svg
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Yandex
+Allow: /
+Crawl-delay: 2
+
+# בוטים של רשתות חברתיות - מותרים
+# Social media bots - allowed
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+User-agent: Telegrambot
+Allow: /
+
+# חסימת בוטים מזיקים או לא רצויים
+# Block harmful or unwanted bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+# בוטים לבדיקת אבטחה - מותרים בזהירות
+# Security scanning bots - allowed with caution
+User-agent: Nuclei
+Crawl-delay: 10
+
+User-agent: Nmap
+Crawl-delay: 10
+
+# פרטי יצירת קשר
+# Contact information
+# ארגון: IONSEC.IO
+# Organization: IONSEC.IO
+# אתר: https://ionsec.io
+# Website: https://ionsec.io
+# דוא"ל: info@ionsec.io
+# Email: info@ionsec.io
+# גיטהאב: https://github.com/ionsec/Tikun13checker
+# GitHub: https://github.com/ionsec/Tikun13checker

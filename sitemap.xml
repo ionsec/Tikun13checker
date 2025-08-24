@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+    
+    <!-- Homepage - Main entry point -->
+    <url>
+        <loc>https://ionsec.github.io/tikun13-checker/</loc>
+        <lastmod>2024-12-24</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="he" href="https://ionsec.github.io/tikun13-checker/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ionsec.github.io/tikun13-checker/"/>
+    </url>
+    
+    <!-- Scanner Section - Website compliance checker -->
+    <url>
+        <loc>https://ionsec.github.io/tikun13-checker/#scanner-section</loc>
+        <lastmod>2024-12-24</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- Assessment Section - Self-assessment questionnaire -->
+    <url>
+        <loc>https://ionsec.github.io/tikun13-checker/#assessment</loc>
+        <lastmod>2024-12-24</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- Cookie Builder Section - Advanced cookie banner builder -->
+    <url>
+        <loc>https://ionsec.github.io/tikun13-checker/#cookie-builder-section</loc>
+        <lastmod>2024-12-24</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- Features Section - Tool capabilities -->
+    <url>
+        <loc>https://ionsec.github.io/tikun13-checker/#features</loc>
+        <lastmod>2024-12-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Resources Section - Educational materials -->
+    <url>
+        <loc>https://ionsec.github.io/tikun13-checker/#resources</loc>
+        <lastmod>2024-12-24</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Privacy Policy -->
+    <url>
+        <loc>https://ionsec.github.io/tikun13-checker/privacy.html</loc>
+        <lastmod>2024-12-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Terms of Service -->
+    <url>
+        <loc>https://ionsec.github.io/tikun13-checker/terms.html</loc>
+        <lastmod>2024-12-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Cookie Policy -->
+    <url>
+        <loc>https://ionsec.github.io/tikun13-checker/cookie-policy.html</loc>
+        <lastmod>2024-12-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+</urlset>

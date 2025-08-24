@@ -1,0 +1,131 @@
+{
+    "consentModal": {
+        "label": "הודעת עוגיות",
+        "title": "אנחנו משתמשים בעוגיות 🍪",
+        "description": "האתר הזה משתמש בעוגיות כדי לשפר את חוויית המשתמש שלך. בהתאם לתיקון 13 לחוק הגנת הפרטיות, אנו מבקשים את הסכמתך המפורשת לשימוש בעוגיות. תוכל/י לבחור אילו סוגי עוגיות לאשר, או לדחות את כולן למעט עוגיות חיוניות.",
+        "acceptAllBtn": "אשר הכל",
+        "acceptNecessaryBtn": "דחה הכל",
+        "showPreferencesBtn": "נהל העדפות",
+        "footer": "<a href=\"privacy.html\">מדיניות פרטיות</a>\n<a href=\"terms.html\">תנאי שימוש</a>"
+    },
+    "preferencesModal": {
+        "title": "מרכז העדפות עוגיות",
+        "acceptAllBtn": "אשר הכל",
+        "acceptNecessaryBtn": "דחה הכל",
+        "savePreferencesBtn": "שמור העדפות",
+        "closeIconLabel": "סגור חלון",
+        "serviceCounterLabel": "שירות|שירותים",
+        "sections": [
+            {
+                "title": "שימוש בעוגיות",
+                "description": "אנו משתמשים בעוגיות כדי להבטיח את הפעילות התקינה של האתר, לשפר את חוויית המשתמש, ולנתח את השימוש באתר. חלק מהעוגיות חיוניות לתפקוד האתר, בעוד שאחרות דורשות את הסכמתך המפורשת בהתאם לתיקון 13 לחוק הגנת הפרטיות."
+            },
+            {
+                "title": "עוגיות חיוניות <span class=\"pm__badge\">תמיד פעילות</span>",
+                "description": "עוגיות אלו הכרחיות לתפקוד הבסיסי של האתר. הן מאפשרות ניווט בין עמודים, גישה לאזורים מאובטחים, ושמירת העדפות בסיסיות. האתר לא יכול לתפקד כראוי ללא עוגיות אלו, ולכן הן תמיד פעילות.",
+                "linkedCategory": "necessary",
+                "cookieTable": {
+                    "headers": {
+                        "name": "שם",
+                        "description": "תיאור",
+                        "service": "שירות"
+                    },
+                    "body": [
+                        {
+                            "name": "tikun13_cookie_consent",
+                            "description": "שומר את העדפות העוגיות שלך",
+                            "service": "Tikun13 Checker"
+                        },
+                        {
+                            "name": "cc_cookie",
+                            "description": "מאחסן את הסכמת המשתמש לעוגיות",
+                            "service": "Cookie Consent"
+                        }
+                    ]
+                }
+            },
+            {
+                "title": "עוגיות תפקודיות",
+                "description": "עוגיות אלו מאפשרות פונקציונליות משופרת והתאמה אישית, כגון שמירת השפה המועדפת, אזור גיאוגרפי, או העדפות תצוגה. המידע שנאסף אינו מזהה אותך באופן אישי.",
+                "linkedCategory": "functionality",
+                "cookieTable": {
+                    "headers": {
+                        "name": "שם",
+                        "description": "תיאור",
+                        "service": "שירות"
+                    },
+                    "body": [
+                        {
+                            "name": "language_preference",
+                            "description": "שומר את העדפת השפה שלך",
+                            "service": "Tikun13 Checker"
+                        },
+                        {
+                            "name": "theme_preference",
+                            "description": "שומר את העדפת הערכת הנושא",
+                            "service": "Tikun13 Checker"
+                        }
+                    ]
+                }
+            },
+            {
+                "title": "עוגיות אנליטיקס",
+                "description": "עוגיות אלו עוזרות לנו להבין כיצד מבקרים משתמשים באתר על ידי איסוף ודיווח מידע באופן אנונימי. המידע משמש לשיפור האתר והתוכן שלנו. כל הנתונים נשמרים מקומית ואינם משותפים עם צדדים שלישיים.",
+                "linkedCategory": "analytics",
+                "cookieTable": {
+                    "headers": {
+                        "name": "שם",
+                        "description": "תיאור",
+                        "service": "שירות"
+                    },
+                    "body": [
+                        {
+                            "name": "local_analytics",
+                            "description": "עוקב אחר שימוש באתר באופן מקומי",
+                            "service": "Local Analytics"
+                        },
+                        {
+                            "name": "scan_count",
+                            "description": "סופר את מספר הסריקות שבוצעו",
+                            "service": "Tikun13 Checker"
+                        }
+                    ]
+                }
+            },
+            {
+                "title": "עוגיות שיווק",
+                "description": "עוגיות אלו משמשות למעקב אחר מבקרים באתרים שונים. הכוונה היא להציג פרסומות רלוונטיות ומעניינות למשתמש הבודד. האתר שלנו כרגע אינו משתמש בעוגיות שיווק.",
+                "linkedCategory": "marketing"
+            },
+            {
+                "title": "מידע נוסף",
+                "description": "לכל שאלה בנוגע למדיניות העוגיות שלנו ולאופן ניהול ההעדפות שלך, אנא <a class=\"cc__link\" href=\"mailto:info@ionsec.io\">צור קשר</a>."
+            }
+        ]
+    },
+    "revisionMessage": {
+        "title": "מדיניות העוגיות עודכנה",
+        "description": "מדיניות העוגיות שלנו עודכנה מאז ביקורך האחרון.",
+        "acceptAllBtn": "אשר הכל",
+        "moreBtn": "הצג שינויים"
+    },
+    "consentWithdrawal": {
+        "title": "ביטול הסכמה",
+        "description": "באפשרותך לבטל את הסכמתך לעוגיות בכל עת. לחץ/י על הכפתור למטה כדי לבטל את כל ההסכמות למעט עוגיות חיוניות.",
+        "withdrawBtn": "בטל הסכמה",
+        "confirmText": "האם אתה בטוח שברצונך לבטל את הסכמתך?"
+    },
+    "dataRetention": {
+        "title": "שמירת נתונים",
+        "description": "המידע שלך נשמר בהתאם למדיניות הפרטיות שלנו ולדרישות תיקון 13.",
+        "retentionPeriod": "תקופת שמירה: 90 ימים",
+        "deleteBtn": "בקש מחיקת נתונים"
+    },
+    "accessibility": {
+        "modalTitle": "חלון הסכמה לעוגיות",
+        "closeModal": "סגור חלון",
+        "acceptButton": "כפתור אישור",
+        "rejectButton": "כפתור דחייה",
+        "settingsButton": "כפתור הגדרות"
+    }
+}

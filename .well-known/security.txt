@@ -1,0 +1,20 @@
+# Security Policy for Tikun13 Checker
+# This file follows the standard from https://securitytxt.org/
+
+Contact: mailto:security@ionsec.io
+Contact: https://ionsec.io/contact
+Expires: 2026-01-15T00:00:00.000Z
+Preferred-Languages: he, en
+Canonical: https://tikun13.ionsec.io/.well-known/security.txt
+Policy: https://ionsec.io/security-policy
+Acknowledgments: https://github.com/ionsec/Tikun13checker/security/advisories
+
+# PGP Key (optional - replace with actual key if available)
+# Encryption: https://ionsec.io/pgp-key.asc
+
+# Bug Bounty Program
+# We appreciate responsible disclosure of security vulnerabilities.
+# Please report any security issues to security@ionsec.io
+
+# This is an open-source project
+# Source code: https://github.com/ionsec/Tikun13checker

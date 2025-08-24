@@ -1,0 +1,441 @@
+/* ===============================================
+   Performance Optimizations for GitHub Pages
+   Tikun13checker - Maximum Performance CSS
+   =============================================== */
+
+/* ===========================================
+   CSS Containment for Layout Performance
+   =========================================== */
+
+/* Container elements - contain layout and style */
+.container {
+    contain: layout style;
+}
+
+.section, 
+.scan-section, 
+.assessment-section, 
+.cookie-builder-section,
+.resources-section {
+    contain: layout;
+}
+
+/* Card elements - full containment for isolation */
+.card, 
+.scan-card, 
+.assessment-card, 
+.cookie-preview, 
+.modal-content,
+.resource-card,
+.faq-item {
+    contain: layout style paint;
+}
+
+/* Fixed position elements */
+.theme-toggle, 
+.fab, 
+.nav-gradient, 
+header {
+    contain: layout style paint;
+    /* Prevent unnecessary repaints */
+    will-change: auto;
+}
+
+/* ===========================================
+   Hardware Acceleration & Compositing
+   =========================================== */
+
+/* Enable hardware acceleration for smooth animations */
+.btn, 
+.card, 
+.animated,
+.modal,
+.tooltip {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+/* Optimize transforms for mobile */
+@media (max-width: 768px) {
+    .btn,
+    .card {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+/* ===========================================
+   Will-Change Optimization
+   =========================================== */
+
+/* Only apply will-change during interactions */
+@media (prefers-reduced-motion: no-preference) {
+    /* Hover states */
+    .btn:hover,
+    .card:hover,
+    .fab:hover {
+        will-change: transform, box-shadow;
+    }
+    
+    /* Active animations */
+    .loading {
+        will-change: transform;
+    }
+    
+    .progress-bar::after {
+        will-change: width;
+    }
+    
+    /* Animated elements when in viewport */
+    .animated.in-view {
+        will-change: transform, opacity;
+    }
+    
+    /* Remove will-change after animation */
+    .animated.animation-complete {
+        will-change: auto;
+    }
+    
+    /* Scroll-triggered animations */
+    .fade-in-up.animating,
+    .slide-in.animating {
+        will-change: transform, opacity;
+    }
+}
+
+/* Disable will-change for reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        will-change: auto !important;
+    }
+}
+
+/* ===========================================
+   Font Optimization & Fallbacks
+   =========================================== */
+
+/* Optimized font fallback to prevent layout shift */
+@font-face {
+    font-family: 'Rubik-fallback';
+    src: local('Arial Hebrew'), local('Arial');
+    size-adjust: 105%;
+    ascent-override: 85%;
+    descent-override: 20%;
+    line-gap-override: 0%;
+}
+
+/* Apply fallback fonts */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Rubik', 'Rubik-fallback', -apple-system, BlinkMacSystemFont, sans-serif;
+    /* Optimize text rendering */
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: 'Rubik', 'Open Sans', 'Rubik-fallback', -apple-system, BlinkMacSystemFont, sans-serif;
+    text-rendering: optimizeSpeed;
+}
+
+/* ===========================================
+   Animation Performance
+   =========================================== */
+
+/* Optimize keyframe animations */
+@keyframes spin {
+    to { 
+        transform: rotate(360deg) translateZ(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) translateZ(0);
+    }
+    50% {
+        transform: translateY(-10px) translateZ(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.4);
+        transform: translateZ(0);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(37, 99, 235, 0);
+        transform: translateZ(0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 99, 235, 0);
+        transform: translateZ(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px) translateZ(0);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) translateZ(0);
+    }
+}
+
+/* Use transform instead of position for animations */
+.slide-in {
+    transform: translateX(-100%) translateZ(0);
+    transition: transform 0.3s ease;
+}
+
+.slide-in.active {
+    transform: translateX(0) translateZ(0);
+}
+
+/* ===========================================
+   Scroll Performance
+   =========================================== */
+
+/* Optimize scrolling performance */
+.scroll-container {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    overscroll-behavior: contain;
+}
+
+/* Prevent reflow during scroll */
+.sticky-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    contain: layout style paint;
+    transform: translateZ(0);
+}
+
+/* ===========================================
+   Image & Media Optimization
+   =========================================== */
+
+/* Lazy loading images */
+img[loading="lazy"] {
+    content-visibility: auto;
+}
+
+/* Optimize image rendering */
+img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+}
+
+/* SVG optimization */
+svg {
+    shape-rendering: geometricPrecision;
+    text-rendering: geometricPrecision;
+}
+
+/* ===========================================
+   Form & Input Optimization
+   =========================================== */
+
+/* Optimize form inputs */
+input,
+textarea,
+select {
+    /* Prevent zoom on iOS */
+    font-size: 16px;
+    /* Hardware acceleration */
+    transform: translateZ(0);
+}
+
+/* Optimize focus states */
+input:focus,
+textarea:focus,
+select:focus {
+    will-change: box-shadow, border-color;
+}
+
+/* ===========================================
+   Transition Optimization
+   =========================================== */
+
+/* Optimize common transitions */
+.btn,
+.card,
+.modal {
+    transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+    transition-property: transform, box-shadow, opacity;
+}
+
+/* Reduce transition complexity */
+.simple-transition {
+    transition: opacity 0.2s ease;
+}
+
+/* ===========================================
+   Paint & Composite Optimization
+   =========================================== */
+
+/* Reduce paint areas */
+.icon,
+.badge,
+.tag {
+    contain: paint;
+}
+
+/* Optimize shadows for performance */
+.optimized-shadow {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    will-change: auto;
+}
+
+.optimized-shadow:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    will-change: box-shadow;
+}
+
+/* ===========================================
+   Critical Rendering Path Optimization
+   =========================================== */
+
+/* Above-the-fold content */
+.hero-section {
+    contain: layout style;
+    /* Prevent layout shift */
+    min-height: 80vh;
+}
+
+/* Defer non-critical animations */
+.below-fold {
+    animation-play-state: paused;
+}
+
+.below-fold.in-view {
+    animation-play-state: running;
+}
+
+/* ===========================================
+   Memory Optimization
+   =========================================== */
+
+/* Clean up after animations */
+.animation-cleanup {
+    animation: none;
+    transition: none;
+    transform: none;
+    will-change: auto;
+}
+
+/* Optimize large lists */
+.virtual-scroll {
+    contain: strict;
+    content-visibility: auto;
+}
+
+/* ===========================================
+   Mobile Performance
+   =========================================== */
+
+@media (max-width: 768px) {
+    /* Disable complex animations on mobile */
+    .mobile-no-animation {
+        animation: none !important;
+        transition: opacity 0.2s ease !important;
+    }
+    
+    /* Simplify shadows on mobile */
+    .card,
+    .btn {
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+    }
+    
+    /* Optimize touch interactions */
+    .btn,
+    .card,
+    a {
+        -webkit-tap-highlight-color: transparent;
+        touch-action: manipulation;
+    }
+}
+
+/* ===========================================
+   Print Optimization
+   =========================================== */
+
+@media print {
+    /* Remove animations for print */
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+    
+    /* Hide non-essential elements */
+    .theme-toggle,
+    .fab,
+    .modal {
+        display: none !important;
+    }
+}
+
+/* ===========================================
+   Performance Monitoring Classes
+   =========================================== */
+
+/* Add to elements for performance tracking */
+.perf-monitor {
+    /* Mark for performance observer */
+    contain: layout style paint;
+}
+
+.perf-critical {
+    /* Critical rendering path elements */
+    content-visibility: visible;
+    contain-intrinsic-size: auto;
+}
+
+/* ===========================================
+   Intersection Observer Helpers
+   =========================================== */
+
+/* Elements pending lazy load */
+.lazy-pending {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.lazy-loaded {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* ===========================================
+   Browser-Specific Optimizations
+   =========================================== */
+
+/* Chrome/Edge optimizations */
+@supports (content-visibility: auto) {
+    .content-auto {
+        content-visibility: auto;
+        contain-intrinsic-size: 0 500px;
+    }
+}
+
+/* Safari optimizations */
+@supports (-webkit-touch-callout: none) {
+    .safari-optimize {
+        -webkit-transform: translateZ(0);
+        -webkit-backface-visibility: hidden;
+    }
+}
+
+/* Firefox optimizations */
+@-moz-document url-prefix() {
+    .firefox-optimize {
+        transform: translateZ(0);
+        will-change: auto;
+    }
+}
